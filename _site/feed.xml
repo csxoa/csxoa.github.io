@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-06-28T23:38:36+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Faire c’est être</title><subtitle>Your Site Description
+</subtitle><author><name>lena</name><email>lenachoi.dev@gmail.com</email></author><entry><title type="html">What is Java?</title><link href="http://localhost:4000/2023/06/26/What-is-java.html" rel="alternate" type="text/html" title="What is Java?" /><published>2023-06-26T00:00:00+09:00</published><updated>2023-06-26T00:00:00+09:00</updated><id>http://localhost:4000/2023/06/26/What-is-java</id><content type="html" xml:base="http://localhost:4000/2023/06/26/What-is-java.html"><![CDATA[<p>자바란 무엇일까?</p>
+
+<!--more-->
+
+<hr />
+
+<p align="center">
+<img src="https://media.makeameme.org/created/java-java-everywhere.jpg" />
+</p>
+
+<h2 id="what-is-java">What is Java?</h2>
+<p align="center">
+<img src="https://image.dongascience.com/Photo/2017/08/15041412372646.png" />
+</p>
+
+<p>자바는 썬 마이크로시스템즈에서 개발한 객체 지향적 프로그래밍 언어이다. 
+커피 모양의 로고가 인상적이다. 
+썬 마이크로시스템즈의 개발자들이 자주 마시던 커피가 인도네시아의 자바 원두로 만들어진 커피라서 자바라고 지었다, 는 이야기도 있다. 
+(<em>이는 낭설인듯 하다. 실제로는 브레인스토밍 회의 도중에 나온 이름이라고.</em> )</p>
+
+<p>세상에 존재하는 수많은 프로그래밍 언어 중에 자바의 인기는 늘 상위권에 속해있다.
+자바가 인기있는 데에는 플랫폼에 독립적이라거나, 확장성이 좋다거나, 웹 개발에 국한되지 않고 다양한 도메인에서 활용 가능하다는 등 여러 이유들이 있지만
+솔직하게 말하자면 써보기 전까지는 잘 모르겠다.
+이제부터 자바에 대해서 공부하고 왜 자바가 인기있는지 몸소 체득하여 보자.</p>
+
+<h2 id="인터프리터와-컴파일러">인터프리터와 컴파일러</h2>
+<p>자바의 구성 요소에 대해 공부하기 전에 먼저 인터프리터와 컴파일러 언어의 차이에 대해 알아보고 넘어가려 한다.</p>
+
+<h3 id="컴파일러">컴파일러</h3>
+<p>컴파일이란 프로그래머가 작성한 고수준의 언어로 소스 코드를 컴퓨터가 이해할 수 있는 기계어나 바이트 코드로 ‘번역’ 해주는 것이다.</p>
+
+<p>컴파일러는 프로그램의 전체 소스 코드를 한 번에 컴파일해주는 프로그램을 의미한다. 
+컴파일 된 프로그램의 코드는 기계어 혹은 바이트 코드이므로 프로그램 자체의 실행 속도가 빠르지만, 컴파일을 하는 과정에 대한 추가적인 시간과 노력이 필요하다.
+컴파일된 코드는 원래 소스 코드처럼 직접 읽거나 수정할 수 없기 때문에 컴파일된 프로그램을 디버깅하는 것이 더 어려울 수 있다.
+또, 코드가 수정되면 수정될 때마다 다시 컴파일 해주어야 하고 OS에 따라 다른 실행파일이 필요하다는 단점이 있다.</p>
+
+<p>대표적인 컴파일 언어로는 C, C++, Go 가 있다.</p>
+
+<h3 id="인터프리터">인터프리터</h3>
+<p>인터프리터는 소스 코드를 한 줄씩 읽어 즉시 기계어로 번역하는 프로그램을 의미한다. 
+컴파일러와 똑같이 소스 코드를 컴파일하는 과정을 거치지만, 개발자가 컴파일을 직접 하는게 아니라 인터프리터나 가상머신이 런타임 도중 컴파일을 진행한다.
+코드가 수정될 때마다 컴파일을 할 필요가 없고 프로그램 이식성이 좋다. 즉, OS마다 다른 파일이 필요하지 않다.</p>
+
+<p>그러나 소스 코드를 번역해 줄 인터프리터가 필요하고, 
+각 코드 라인이 실시간으로 번역되고 실행되기 때문에 컴파일된 프로그램에 비해 실행 속도가 느리다는 단점이 있다.</p>
+
+<p>대표적인 인터프리터 언어로는 Python, JavaScript, Ruby 등이 있다.</p>
+
+<h3 id="인터프리터--컴파일러">인터프리터 + 컴파일러</h3>
+<p>그렇다면 자바는 어떤 방식으로 기계가 소스 코드를 읽도록 만들까?
+자바는 인터프리터 언어이면서 동시에 컴파일러 언어이다. 
+아래 이미지는 자바로 쓰여진 소스 코드가 구동되는 과정을 보여준다.</p>
+
+<p><img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20220802234402/Java-Interpreter-Step-by-Step1.jpg" alt="image" /></p>
+
+<p>먼저 <code class="language-plaintext highlighter-rouge">.java</code> 에 쓰여진 소스코드가 javac 라는 컴파일러에 의해 바이트 코드로 쓰여진 <code class="language-plaintext highlighter-rouge">.class</code> 파일로 컴파일 된다.
+컴파일 된 코드는 인터프리터에 의해 한 줄 한 줄 기계어로 번역된다.</p>
+
+<h3 id="jit-just-in-time">JIT just-in-time</h3>
+<p>앞서 말했듯 인터프리터는 코드를 한 줄 한 줄 읽어 번역하기 때문에 느리다.
+자바 역시 인터프리터 과정에서의 속도 저하를 피할 수 없었다. 
+이 문제를 해결하기 위해 javac 를 대신할 JIT 컴파일러가 등장하였다.</p>
+
+<p>JIT 컴파일러는 소스 코드 내에서 중복되어 사용되는 코드나 메서드들(<em>이 코드들을 hot code, 이 코드들이 있는 구역을 hot spot 이라고 한다</em> )을 미리 컴파일 해서 저장한다.
+이후 인터프리터 과정에서 이 hot code 들이 위치한 spot 을 지나게 될 때, 
+미리 컴파일해 둔 기계어 코드를 사용하여 인터프리터 과정의 cost 를 줄이고 속도와 효율을 높이는 것이 JIT 컴파일러의 목적이다.</p>
+
+<h2 id="자바의-동작-원리">자바의 동작 원리</h2>
+<p>그렇다면 JIT 컴파일러는 어떻게 이 코드가 hot code 인지 알 수 있을까? 
+무엇이 자바를 컴파일하고 인터프리팅 해주는 것일까?
+자바는 어떻게 동작할까? 이제부터 함께 알아가보자.</p>
+
+<h3 id="jvm-java-virtual-machine">JVM Java Virtual Machine</h3>
+<p><code class="language-plaintext highlighter-rouge">.class</code> 파일로 컴파일 된 바이트 코드는 JVM 을 통해 실행된다.
+가상 머신Virtual Machine 이라는 이름처럼 JVM은 Java 응용 프로그램을 실행하기 위한 런타임 엔진 역할을 한다.
+(<em>가상 머신은 물리적인 컴퓨터 시스템의 동작을 소프트웨어 프로그램을 통해 시뮬레이션 함으로써 실제 하드웨어에 
+영향을 주지 않고다른 운영 체제나 소프트웨어를 실행할 수 있도록 한다</em> )
+JVM 의 구조는 아래와 같다.</p>
+
+<p align="center">
+<img src="https://www.javainterviewpoint.com/java-virtual-machine-architecture-in-java/jvm-architecture/" />
+</p>
+
+<p>JVM은 클래스 로더, 런타임 데이터 영역, 실행 엔진이라는 이름의 세 가지 서브 시스템을 갖는다. 
+각각의 서브 시스템들이 무슨 역할을 하는지 간단하게 정리해보았다.</p>
+
+<h4 id="클래스-로더-서브시스템-class-loader-subsystem">클래스 로더 서브시스템 Class loader subsystem</h4>
+<p>클래스 로더 서브 시스템은 이름 그대로 바이트 코드화 된 <code class="language-plaintext highlighter-rouge">.class</code> 파일을 받아
+로딩Loading, 링킹Linking, 초기화Initialization 의 과정을 거쳐 메모리로 적재시키는 역할을 한다.</p>
+
+<h4 id="런타임-데이터-영역-runtime-data-area">런타임 데이터 영역 Runtime data area</h4>
+<p>런타임 데이터 영역은 자바 프로그램을 실행하기 위해 OS로부터 메모리를 할당받은 공간이다.
+다른 이름으로 메모리 영역이라고도 한다.
+메서드Method, 힙Heap, 스택Stack, 프로그램 카운터 레지스터Program Counter Registers, 네이티브 메서드 스택Native Method Stack 이라는 다섯가지 영역으로 구성되어 있다.</p>
+
+<ol>
+  <li>메서드 영역 : 메서드 영역은 정적 변수, 클래스 이름, 직계 부모 클래스 이름, 메서드 및 변수 정보 등 모든 클래스 수준의 정보를 저장한다.
+(<em>Java 8 부터 정적 변수는 heap 에 저장된다</em>)</li>
+  <li>힙 영역 : 힙 영역은 모든 객체의 정보를 저장한다.</li>
+  <li>스택 영역 : 스택 영역은 Java 프로그램의 모든 스레드마다 생성되어 메서드 호출 및 로컬 변수 저장에 사용된다. 
+스레드가 종료되면, 런타임 스택은 JVM에 의해 파괴된다.</li>
+  <li>프로그램 카운터 레지스터 : 프로그램 카운터 레지스터는 각각의 스레드가 현재 실행중인 명령의 주소를 저장한다.</li>
+  <li>네이티브 메서드 스택 : 네이티브 메서드 스택은 네이티브 메서드 정보를 저장한다.</li>
+</ol>
+
+<h4 id="실행-엔진-execution-engine">실행 엔진 Execution engine</h4>
+<p>실행 엔진은 <code class="language-plaintext highlighter-rouge">.class</code> 를 실행한다.
+인터프리터, JIT 컴파일러, 가비지 컬렉션Garbage Collection 으로 구성되어 있다.</p>
+
+<p>앞선 과정들에서 코드를 적재한 후 실행하기 때문에, JIT 컴파일러는 어떤 코드가 ‘hot’ 한지 알 수 있는 것이다.</p>
+
+<h2 id="jdk-jre">JDK? JRE?</h2>
+<p>JVM에 대해 공부하다 보니 JDK 와 JRE 라는 용어도 알게 되었다.</p>
+
+<p align="center">
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20210218150010/JDK.png" />
+</p>
+
+<h3 id="jdk-java-development-kit">JDK Java Development Kit</h3>
+<p>JDK 는 Java 프로그램을 개발하고 실행 할 수 있는 소프트웨어 개발 키트이다. javac, JVM 등 다양한 개발 도구가 포함되어 있다.</p>
+
+<h3 id="jre-java-runtime-environment">JRE Java Runtime Environment</h3>
+<p>JRE는 Java 애플리케이션을 실행하는 데 필요한 런타임 환경이다. 실행만 할 수 있으며 개발은 할 수 없다.</p>
+
+<hr />
+
+<h2 id="ref">Ref.</h2>
+
+<p><a href="https://www.geeksforgeeks.org/jvm-works-jvm-architecture/?ref=lbp">geeksforgeeks - How JVM Works – JVM Architecture?</a></p>
+
+<p><a href="https://www.geeksforgeeks.org/differences-jdk-jre-jvm/?ref=lbp">geeksforgeeks - Differences between JDK, JRE and JVM</a></p>
+
+<p><a href="https://techvidvan.com/tutorials/java-virtual-machine/">techvidvan - JVM – Java Virtual Machine Working and Architecture</a></p>
+
+<p><a href="https://hacks.mozilla.org/2017/02/a-crash-course-in-just-in-time-jit-compilers/">Mozilla Hacks : A crash course in just-in-time (JIT) compilers</a></p>
+
+<p><a href="https://dzone.com/articles/jvm-architecture-explained">dzone : The JVM Architecture Explained</a></p>
+
+<p><a href="https://medium.com/nerd-for-tech/jit-java-just-in-time-jit-compiler-af1cc86fe53b">medium/@vidushikadasanayaka - JIT Java Just In Time (JIT) Compiler</a></p>
+
+<p><a href="https://velog.io/@ddangle/Java-JVMJava-Virtual-Machine">velog/@ddangle : JVM(Java Virtual Machine)</a></p>]]></content><author><name>lena</name><email>lenachoi.dev@gmail.com</email></author><category term="Java" /><summary type="html"><![CDATA[자바란 무엇일까?]]></summary></entry></feed>
